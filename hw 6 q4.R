@@ -2,16 +2,7 @@
 #set up: AR Model
 ar_model <- arima.sim(model = list(ar=c(0.8),
                                     sd=1), n=48)
-sum(ar_model)
-ar_model[1] +2
-sum=0
-sum_yt <- function(sum){
-  for (i in 2:48){
-    sum = sum + (ar_model[i]-ar_model[i-1])^2
-  }
-  return(sum)
-}
-sum_1 <- sum_yt(0)
+
 
 # Method of Moments Estimate (358)
 # part i: method-of-moments
